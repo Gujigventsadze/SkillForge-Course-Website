@@ -16,6 +16,8 @@ nav {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 .navbar-links {
     display: flex;
@@ -70,6 +72,8 @@ nav {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
 .hamburger-menu {
     display: none;

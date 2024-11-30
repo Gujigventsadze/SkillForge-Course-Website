@@ -2,6 +2,7 @@ import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import "./Navbar.css";
 import shopCart from "../../assets/Icons/shoppingCart.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -13,18 +14,22 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="navbar-logo">SkillForge</div>
+        <Link to="/" className="navbar-logo">
+          SkillForge
+        </Link>
         <div className="navbar-links">
-          <a href="">Home</a>
-          <a href="">Courses</a>
-          <a href="">About</a>
+          <Link to="/">Home</Link>
+          <Link to="/courses">Courses</Link>
+          <Link to="/about">About</Link>
         </div>
         <div className="navbar-login">
-          <div className="shopping-div">
+          <Link to="/cart" className="shopping-div">
             <img src={shopCart} />
             <div className="cart-count">0</div>
-          </div>
-          <PrimaryButton>Log In</PrimaryButton>
+          </Link>
+          <Link to="/login">
+            <PrimaryButton>Log In</PrimaryButton>
+          </Link>
         </div>
         <div className="hamburger-menu" onClick={handleMenuClick}>
           <div className={`line1 ${isMenuOpen ? "active" : ""}`}></div>
@@ -33,11 +38,21 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={`responsive-menu ${isMenuOpen ? "active" : ""}`}>
-        <a href="">Home</a>
-        <a href="">Courses</a>
-        <a href="">About</a>
-        <a href="">Cart</a>
-        <a href="">Log In</a>
+        <Link to="/" onClick={handleMenuClick}>
+          Home
+        </Link>
+        <Link to="/courses" onClick={handleMenuClick}>
+          Courses
+        </Link>
+        <Link to="/about" onClick={handleMenuClick}>
+          About
+        </Link>
+        <Link to="/cart" onClick={handleMenuClick}>
+          Cart
+        </Link>
+        <Link to="/login" onClick={handleMenuClick}>
+          Log In
+        </Link>
       </div>
     </>
   );
