@@ -3,8 +3,10 @@ import "./Navbar.css";
 import shopCart from "../../assets/Icons/shoppingCart.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../Context/CartContext";
 
 const Navbar = () => {
+  const { cart } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const handleMenuClick = () => {
@@ -25,7 +27,7 @@ const Navbar = () => {
         <div className="navbar-login">
           <Link to="/cart" className="shopping-div">
             <img src={shopCart} />
-            <div className="cart-count">0</div>
+            <div className="cart-count">{cart.length}</div>
           </Link>
           <Link to="/login">
             <PrimaryButton>Log In</PrimaryButton>

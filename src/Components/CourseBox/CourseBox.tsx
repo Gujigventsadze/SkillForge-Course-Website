@@ -7,6 +7,8 @@ interface CourseBoxProps {
   title: string;
   duration: number;
   price: number;
+  onClick: () => void;
+  resMessage: string;
 }
 
 const CourseBox: React.FC<CourseBoxProps> = ({
@@ -14,6 +16,8 @@ const CourseBox: React.FC<CourseBoxProps> = ({
   title,
   duration,
   price,
+  onClick,
+  resMessage,
 }) => {
   return (
     <div className="coursebox-container">
@@ -29,8 +33,9 @@ const CourseBox: React.FC<CourseBoxProps> = ({
         <div className="coursebox-price">${price.toFixed(2)}</div>
       </div>
       <div className="coursebox-btn">
-        <PrimaryButton>Add to Cart</PrimaryButton>
+        <PrimaryButton onClick={onClick}>Add to Cart</PrimaryButton>
       </div>
+      <div>{resMessage} </div>
     </div>
   );
 };
