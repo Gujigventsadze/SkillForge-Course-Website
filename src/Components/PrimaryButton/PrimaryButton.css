@@ -1,0 +1,15 @@
+#primary-btn {
+    border: none;
+    font-family: "Orbitron";
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: opacity 0.2s;
+}
+#primary-btn:hover {
+    opacity: 0.7;
+}
+#primary-btn:active {
+    opacity: 0.5;
+}
