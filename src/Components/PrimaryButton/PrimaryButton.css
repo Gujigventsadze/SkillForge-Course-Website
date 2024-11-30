@@ -13,3 +13,24 @@
 #primary-btn:active {
     opacity: 0.5;
 }
+
+#blurry-btn {
+    border: none;
+    font-family: "Orbitral";
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    color: #fff;
+    background-color: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+#blurry-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+#blurry-btn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,50 @@
+.intro-container {
+    min-height: 80dvh;
+    background-image: url("../../assets/hologram.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40%;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 3rem;
+}
+.intro-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.intro-left div {
+    font-size: 5rem;
+    font-family: "Orbitron";
+    width: 100%;
+}
+
+@media (max-width:1025px) {
+    .intro-container {
+        background-position: right bottom;
+        background-size: 35%;
+    }
+}
+@media (max-width: 769px) {
+    .intro-left div {
+        font-size: 4rem;
+    }
+}
+@media (max-width:426px) {
+    .intro-container {
+        align-items: center;
+        background-position: bottom center;
+        background-size: 40%;
+        padding: 2rem 1rem;
+    }
+    .intro-left div {
+        text-align: center;
+        font-size: 2.6rem;
+    }
+}
