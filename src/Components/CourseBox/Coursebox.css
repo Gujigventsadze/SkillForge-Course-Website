@@ -1,0 +1,44 @@
+.coursebox-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    background-color: rgba(128, 128, 128, 0.2);
+    box-sizing: border-box;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 10px;
+    font-family: "Montserrat";
+    cursor: pointer;
+    transition: 0.2s;
+}
+.coursebox-container:hover {
+    opacity: 0.9;
+}
+.coursebox-container:active {
+    opacity: 0.8;
+}
+.coursebox-img img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+.coursebox-title {
+    font-size: 2rem;
+}
+.coursebox-lp {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.coursebox-length {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.coursebox-length img {
+    height: 1.4rem;
+}
