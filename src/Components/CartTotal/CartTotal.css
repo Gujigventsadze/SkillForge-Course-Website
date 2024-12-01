@@ -1,0 +1,66 @@
+.carttotal-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: black;
+    width: 30rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 2rem;
+    font-family: "Montserrat";
+    gap: 1rem;
+}
+
+.total-course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-titles {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.course-list {
+    display: flex;
+    gap: 6px;
+}
+.course-list div {
+    color: gray;
+}
+.total-courses,
+.total-tax,
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.total-amount {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.checkout-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20  px;
+}
+
+@media (max-width: 426px) {
+    .carttotal-container {
+        width: 25rem;
+    }
+}
+@media (max-width: 376px) {
+    .carttotal-container {
+        width: 23rem;
+        padding: 1.2rem;
+    }
+    .total-amount {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 321px) {
+    .carttotal-container {
+        width: 19rem;
+        padding: 1rem;
+    }
+}
