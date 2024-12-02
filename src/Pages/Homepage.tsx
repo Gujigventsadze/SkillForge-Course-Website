@@ -56,10 +56,12 @@ const Homepage = () => {
             price={course.price}
             duration={course.duration}
             img={course.img}
-            onClick={() => {
+            onClick={(e) => {
+              e!.stopPropagation();
               handleAddToCart(course);
             }}
             resMessage={resMessages[course.id]}
+            redirectPath={`/course-page/${course.title}`}
           />
         ))}
       </div>

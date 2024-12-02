@@ -1,14 +1,16 @@
 import "./Coursebox.css";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import clockImg from "../../assets/clock.png";
+import { useNavigate } from "react-router-dom";
 
 interface CourseBoxProps {
   img: string;
   title: string;
   duration: number;
   price: number;
-  onClick: () => void;
+  onClick: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   resMessage: string;
+  redirectPath: string;
 }
 
 const CourseBox: React.FC<CourseBoxProps> = ({
@@ -18,9 +20,16 @@ const CourseBox: React.FC<CourseBoxProps> = ({
   price,
   onClick,
   resMessage,
+  redirectPath,
 }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(redirectPath);
+  };
+
   return (
-    <div className="coursebox-container">
+    <div className="coursebox-container" onClick={handleNavigate}>
       <div className="coursebox-img">
         <img src={img} />
       </div>

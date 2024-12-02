@@ -25,6 +25,39 @@
     font-family: "Orbitron";
     text-align: center;
 }
+
+.course-page-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    padding: 4rem;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+}
+.course-page-pic img {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.course-page-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.course-page-description {
+    font-size: 2rem;
+    width: 50%;
+}
+.course-page-pb {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
 @media (max-width: 1025px) {
     .coursebox-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -34,14 +67,31 @@
         align-items: center;
         gap: 3rem;
     }
+    .course-page-description {
+        width: 70%;
+    }
 }
 @media (max-width: 769px) {
     .coursebox-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+    .course-page-description {
+        width: 90%;
+        text-align: left;
+    }
+    .course-page-container {
+        padding: 2rem;
+    }
 }
 @media (max-width: 376px) {
     .coursebox-grid {
         padding: 2rem 0.5rem;
+    }
+    .course-page-pb {
+        flex-direction: column;
+    }
+    .course-page-description {
+        width: 100%;
+        text-align: center;
     }
 }
