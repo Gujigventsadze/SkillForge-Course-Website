@@ -89,9 +89,11 @@ const SignUpPage = () => {
           required
         />
         {error && (
-          <div style={{ fontSize: "1.3rem" }}>Passwords Should Match</div>
+          <div style={{ fontSize: "1.3rem", textAlign: "center" }}>
+            Passwords Should Match
+          </div>
         )}
-        <div>{resMessage}</div>
+        <div style={{ textAlign: "center" }}>{resMessage}</div>
         {loading && (
           <div className="loading-animation">
             <img src={loadingAn} />
