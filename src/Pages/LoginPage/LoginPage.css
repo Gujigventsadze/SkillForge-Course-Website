@@ -17,20 +17,26 @@
     align-items: center;
     gap: 6px;
     font-family: "Montserrat";
-    background: rgba( 255, 255, 255, 0.15 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 6.5px );
-    -webkit-backdrop-filter: blur( 6.5px );
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-sizing: border-box;
     padding: 1rem;
 }
+.loading-animation img {
+    width: 40px;
+    border-radius: 50%;
+}
+
 .login-title {
     font-size: 3rem;
     font-weight: 500;
     margin: 1rem 0;
 }
+
 .login-container input {
     border: none;
     outline: none;
@@ -42,6 +48,7 @@
     font-family: "Montserrat";
     width: 70%;
 }
+
 .log-in-btn {
     border: none;
     font-size: 2rem;
@@ -55,23 +62,28 @@
     margin: 1rem 0;
     transition: opacity 0.2s;
 }
+
 .log-in-btn:hover {
     opacity: 0.9;
 }
+
 .log-in-btn:active {
     opacity: 0.8;
 }
+
 .no-account {
     font-size: 1.4rem;
     font-weight: 500;
     font-family: "Orbitron";
     text-align: center;
 }
+
 .no-account a {
     color: rgb(130, 130, 218);
     cursor: pointer;
     text-decoration: none;
 }
+
 .no-account a:hover {
     text-decoration: underline;
 }
@@ -80,32 +92,39 @@
     .login-container {
         width: 70%;
     }
+
     .login {
         height: 100dvh;
     }
 }
+
 @media (max-width: 769px) {
     .login-container {
         width: 80%;
     }
+
     .log-in-btn {
         width: 50%;
         font-size: 1.5rem;
     }
 }
+
 @media (max-width: 426px) {
     .login-container {
         width: 90%;
     }
+
     .login-container input {
         width: 99%;
         font-size: 1.4rem;
         padding: 0.5rem 1.5rem;
-        
+
     }
+
     .log-in-btn {
         width: 70%;
     }
+
     .no-account {
         font-size: 1rem;
     }
